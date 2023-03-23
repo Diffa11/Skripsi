@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title')
     Home - yukngaji
@@ -17,7 +17,7 @@
                         kepada mereka dan menambah karunia-Nya.
                     </p>
                     <form class="d-flex" role="#">
-                        <button class="btn btn-prim1" type="submit">Mulai Belajar</button>
+                        <a class="btn btn-prim1" type="submit" href="{{ route('program') }}">Mulai Belajar</a>
                     </form>
                 </div>
                 <div class="col-lg-6">
@@ -108,7 +108,7 @@
                     yang mungkin terlambat untuk bisa tapi tidak terlambat untuk belajar. Semangat temen-temen !!</p>
                     <section class="container mt-4 position-absolute bottom-0 end-0">
                         <div class="row product-grid" data-aos="fade-up">
-                            <div class="col-4">
+                            <div class="col-4 d-none d-md-block">
                                 <img src="assets/testi1.png" class="cardtest">
                             </div>
                             <div class="col testi">
@@ -125,7 +125,7 @@
                     Dan kalau ragu bisa chat sama adminnya, dibantu sampe bisa. Syukron.</p>
                     <section class="container mt-4 position-absolute bottom-0 end-0">
                         <div class="row product-grid" data-aos="fade-up">
-                            <div class="col-4">
+                            <div class="col-4 d-none d-md-block">
                                 <img src="assets/testi2.png" class="cardtest">
                             </div>
                             <div class="col testi">
@@ -143,7 +143,7 @@
                     ngaji selalu ada dan selalu bisa.</p>
                     <section class="container mt-4 position-absolute bottom-0 end-0">
                         <div class="row product-grid" data-aos="fade-up">
-                            <div class="col-4">
+                            <div class="col-4 d-none d-md-block">
                                 <img src="assets/testi3.png" class="cardtest">
                             </div>
                             <div class="col testi">
@@ -282,7 +282,7 @@
                     </h1>
                     <p class="desc">Sekarang adalah giliranmu untuk melangkah agar bisa membaca Al Qur’an dengan baik lagi</p>
                     <form class="d-flex" role="#">
-                        <button class="btn btn-prim1" type="submit">Gabung Sekarang</button>
+                        <a class="btn btn-prim1" type="submit" href="{{ route('login') }}">Gabung Sekarang</a>
                     </form>
                 </div>
                 <div class="col-lg-6">

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\AdminDashboardController;
+use App\Http\Controllers\Admin\KelasController;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,6 +74,11 @@ Route::get('/kuis', function () {
 Route::get('/kuisnilai', function () {
     return view('pages.kuisnilai');
 })->name('kuisnilai');
+
+Route::get('/admin', [AdminDashboardController::class, 'index'])
+    ->name('dashboard');
+
+Route::resource('admin/kelas', KelasController::class);
 
 Auth::routes();
 

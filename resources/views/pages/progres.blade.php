@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title')
     Home - yukngaji
@@ -8,18 +8,14 @@
     <section class="container mt-5 hero">
         <div class="row product-grid" data-aos="fade-up">
             <div class="col-lg-3 mb-4 card-side-profil rounded">
-                <div class="text-center pt-1 mb-2 pb-1">
-                    <a class="btn btn-sec d-block" type="" href="{{ route('profil') }}">Profil</a>
+                <div class="d-grid gap-2">
+                    <a class="btn btn-sec mb-2" type="button" href="{{ route('profil') }}">Profil</a>
+                    <a class="btn btn-prim mb-2" type="button" href="{{ route('progres') }}">Progres</a>
+                    <form action="{{url('logout')}}" method="POST">
+                            @csrf
+                            <button type="submit" class="btn btn-danger mb-2">Logout</button>
+                    </form>
                 </div>
-                <div class="text-center pt-1 mb-2 pb-1">
-                    <a class="btn btn-prim d-block" type="" href="{{ route('progres') }}">Progress</a>
-                </div>
-                <form action="{{url('logout')}}" method="POST" class="text-center pt-1 mb-2 pb-1 d-block">
-                        @csrf
-                        <div class="">
-                            <button class="btn btn-logout d-block" type="submit">Logout</button>
-                        </div>
-                </form>
             </div>
 
             <div class="col-lg-8 mb-4 card-progress rounded text-start">

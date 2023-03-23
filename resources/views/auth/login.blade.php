@@ -66,11 +66,10 @@
                                     </div>
 
                                     <div class="row mb-0">
-                                        <div class="text-center pt-1 mb-4 pb-1">
-                                            <button type="submit" class="btn btn-primlogin d-block">
-                                                {{ __('Login') }}
-                                            </button>
-
+                                        <div class="d-grid gap-2">
+                                            <button class="btn btn-prim mb-3" type="submit">{{ __('Login') }}</button>
+                                            {{-- <a href="{{route('home')}}" class="btn btn-sec mt-5 mb-5">kembali</a> --}}
+                                            <a href="{{ __('register') }}"class="btn btn-sec" type="" >Register</a>
                                         </div>
                                     </div>
                                 </form>

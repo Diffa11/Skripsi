@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title')
     Home - yukngaji
@@ -7,18 +7,14 @@
 @section('content')
     <section class="container mt-5 hero">
         <div class="row" data-aos="fade-up">
-            <div class="col-lg-3 mb-4 card-side-profil rounded">
-                <div class="text-center pt-1 mb-2 pb-1">
-                    <a class="btn btn-prim d-block" type="" href="{{ route('profil') }}">Profil</a>
+            <div class="col-lg-3  mb-4 card-side-profil rounded">
+                <div class="d-grid gap-2">
+                    <a class="btn btn-prim mb-2" type="button" href="{{ route('profil') }}">Profil</a>
+                    <a class="btn btn-sec mb-2" type="button" href="{{ route('progres') }}">Progres</a>
                 </div>
-                <div class="text-center pt-1 mb-2 pb-1">
-                    <a class="btn btn-sec d-block" type="" href="{{ route('progres') }}">Progress</a>
-                </div>
-                <form action="{{url('logout')}}" method="POST" class="text-center pt-1 mb-2 pb-1 d-block">
-                        @csrf
-                        <div class="">
-                            <button class="btn btn-logout d-block" type="submit">Logout</button>
-                        </div>
+                <form action="{{url('logout')}}" method="POST">
+                    @csrf
+                    <button type="submit" class="btn btn-danger mt-2">Logout</button>
                 </form>
             </div>
 
@@ -27,7 +23,7 @@
 
                 <form class="text-lg-start">
                     <div class="form-group row mb-1">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
                         <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Abrar">
                         </div>
@@ -39,7 +35,7 @@
                         </div>
                     </div> -->
                     <div class="form-group row mb-1">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Email Address</label>
                         <div class="col-sm-10">
                         <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
                         </div>

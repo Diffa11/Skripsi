@@ -1,4 +1,4 @@
-@extends('layout.app')
+@extends('layouts.app')
 
 @section('title')
     Home - yukngaji
@@ -49,14 +49,6 @@
 
     <section class="container mt-5 hero1">
         <div class="row product-grid" data-aos="fade-up">
-            <!-- <div class="col-lg-4 mb-4">
-                <div class="card">
-                    <img src="assets/pleased-young-handsome-man-showing-thumbs-up-front-isolated-white-wall_141793-94240.jpg" alt="" width="350px" class=" mx-auto mb-2 rounded">
-                    <h2>Brandon Gouse</h2>
-                    <p>CTO Developer</p>
-                </div>
-            </div> -->
-
             <div class="col-lg-4 mb-4">
                 <div class="card">
                     <img src="assets/pleased-young-handsome-man-showing-thumbs-up-front-isolated-white-wall_141793-94240.jpg" alt="" width="350px" class=" mx-auto mb-2 rounded" height="235px">
