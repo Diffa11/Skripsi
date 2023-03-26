@@ -3,6 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminDashboardController;
 use App\Http\Controllers\Admin\KelasController;
+use App\Http\Controllers\Admin\KategoriController;
+use App\Http\Controllers\Admin\MateriController;
+use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\PembelajaranController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +22,12 @@ use App\Http\Controllers\Admin\KelasController;
 use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/program', [ProgramController::class, 'index'])->name('program');
+Route::get('/materi/{id}', [PembelajaranController::class, 'index'])->name('materi');
 
 Route::get('/alur', function () {
     return view('pages.alur');
 })->name('alur');
-
-Route::get('/program', function () {
-    return view('pages.program');
-})->name('program');
 
 Route::get('/tentang', function () {
     return view('pages.tentang');
@@ -46,10 +48,6 @@ Route::get('/privacy', function () {
 Route::get('/pemberitahuan', function () {
     return view('pages.pemberitahuan');
 })->name('pemberitahuan');
-
-Route::get('/materi', function () {
-    return view('pages.materi');
-})->name('materi');
 
 Route::get('/profil', function () {
     return view('pages.profil');
@@ -79,6 +77,10 @@ Route::get('/admin', [AdminDashboardController::class, 'index'])
     ->name('dashboard');
 
 Route::resource('admin/kelas', KelasController::class);
+
+Route::resource('admin/kategori', KategoriController::class);
+
+Route::resource('admin/materi', MateriController::class);
 
 Auth::routes();
 

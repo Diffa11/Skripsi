@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+        <ul class="navbar-nav bg-gradient-success sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="">
@@ -27,41 +27,17 @@
 
             <!-- Nav Item - Galeri Travel -->
             <li class="nav-item ">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-images"></i>
+                <a class="nav-link" href="{{route('kategori.index')}}">
+                    <i class="fas fa-fw fa-image"></i>
                     <span>Kategori</span></a>
             </li>
 
             <!-- Nav Item - Transaksi -->
             <li class="nav-item ">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{route('materi.index')}}">
                     <i class="fas fa-fw fa-dollar-sign"></i>
                     <span>Materi</span></a>
             </li>
-
-            {{-- <li class="nav-item ">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-dollar-sign"></i>
-                    <span>Daftar Paket Harga</span></a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-dollar-sign"></i>
-                    <span>Testimoni</span></a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-dollar-sign"></i>
-                    <span>Portfolio</span></a>
-            </li>
-
-            <li class="nav-item ">
-                <a class="nav-link" href="">
-                    <i class="fas fa-fw fa-dollar-sign"></i>
-                    <span>Klien</span></a>
-            </li> --}}
 
             <hr class="sidebar-divider">
 

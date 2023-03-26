@@ -6,10 +6,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Kelas Pembelajaran</h1>
-                        <a href="{{route('kelas.create')}}" class="btn btn-sm btn-primary shadow-sm">
+                        <h1 class="h3 mb-0 text-gray-800">Materi Pembelajaran</h1>
+                        <a href="{{route('materi.create')}}" class="btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-plus fa-sm text-white-50">
-                                Tambah Kelas
+                                Tambah Materi
                             </i>
                         </a>
                     </div>
@@ -23,9 +23,10 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Nama</th>
+                                            <th>Nama Materi</th>
+                                            <th>Kategori</th>
                                             <th>Gambar</th>
-                                            <th>Deskripsi</th>
+                                            <th>Audio</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -33,14 +34,15 @@
                                         @forelse ($items as $item)
                                             <tr>
                                                 <td>{{$item->id}}</td>
-                                                <td>{{$item->nama_kelas}}</td>
+                                                <td>{{$item->nama_materi}}</td>
+                                                <td>{{$item->categories->nama_kategori}}</td>
                                                 <td><img src="{{Storage::url($item->image)}}" alt="" width="150px" class="img-thumbnail"/></td>
-                                                <td>{{$item->description}}</td>
+                                                <td>{{$item->audio}}</td>
                                                 <td>
-                                                    <a href="{{route('kelas.edit', $item->id)}}" class="btn btn-info">
+                                                    <a href="{{route('materi.edit', $item->id)}}" class="btn btn-info">
                                                         <i class="fa fa-pencil-alt"></i>
                                                     </a>
-                                                    <form action="{{route('kelas.destroy', $item->id)}}" method="POST" class="d-inline">
+                                                    <form action="{{route('materi.destroy', $item->id)}}" method="POST" class="d-inline">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="btn btn-danger">

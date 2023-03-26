@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-white sticky-top">
         <div class="container-fluid container my-0">
             <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="assets/logo.png" alt="home" width="160" height="40" class="img-fluid">
+                <img src="{{ url('assets/logo.png') }}" alt="home" width="160" height="40" class="img-fluid">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +37,7 @@
 
                 @auth
                     <a class="navbar-brand" href="{{ route('profil') }}">
-                        <img src="assets/avatar.png" alt="home" width="50" height="50" class="img-fluid img-profil">
+                        <img src="{{ url('assets/avatar.png') }}" alt="home" width="50" height="50" class="img-fluid img-profil">
                     </a>
                 @endauth
 

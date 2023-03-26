@@ -1,4 +1,4 @@
-@extends('layout.daftar')
+@extends('layouts.daftar')
 
 @section('content')
  <section class="gradient-form">

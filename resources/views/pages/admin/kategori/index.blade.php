@@ -6,10 +6,10 @@
 
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Kelas Pembelajaran</h1>
-                        <a href="{{route('kelas.create')}}" class="btn btn-sm btn-primary shadow-sm">
+                        <h1 class="h3 mb-0 text-gray-800">Kategori Pembelajaran</h1>
+                        <a href="{{route('kategori.create')}}" class="btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-plus fa-sm text-white-50">
-                                Tambah Kelas
+                                Tambah Kategori
                             </i>
                         </a>
                     </div>
@@ -23,9 +23,8 @@
                                     <thead>
                                         <tr>
                                             <th>Id</th>
-                                            <th>Nama</th>
-                                            <th>Gambar</th>
-                                            <th>Deskripsi</th>
+                                            <th>Nama Kategori</th>
+                                            <th>Kelas</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -33,14 +32,13 @@
                                         @forelse ($items as $item)
                                             <tr>
                                                 <td>{{$item->id}}</td>
-                                                <td>{{$item->nama_kelas}}</td>
-                                                <td><img src="{{Storage::url($item->image)}}" alt="" width="150px" class="img-thumbnail"/></td>
-                                                <td>{{$item->description}}</td>
+                                                <td>{{$item->nama_kategori}}</td>
+                                                <td>{{$item->classes->nama_kelas}}</td>
                                                 <td>
-                                                    <a href="{{route('kelas.edit', $item->id)}}" class="btn btn-info">
+                                                    <a href="{{route('kategori.edit', $item->id)}}" class="btn btn-info">
                                                         <i class="fa fa-pencil-alt"></i>
                                                     </a>
-                                                    <form action="{{route('kelas.destroy', $item->id)}}" method="POST" class="d-inline">
+                                                    <form action="{{route('kategori.destroy', $item->id)}}" method="POST" class="d-inline">
                                                         @csrf
                                                         @method('delete')
                                                         <button class="btn btn-danger">

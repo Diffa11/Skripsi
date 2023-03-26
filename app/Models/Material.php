@@ -21,7 +21,7 @@ class Material extends Model
 
     ];
 
-    public function kategori()
+    public function categories()
     {
         return $this->belongsTo(Category::class, 'kategori_id', 'id');
     }

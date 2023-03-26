@@ -8,7 +8,7 @@
                 <!-- Grid column -->
                     <div class="col-lg-6 mx-auto mb-4">
                 <!-- Content -->
-                    <img src="assets/logo1.png" width="160px" height="auto" class="rounded img-fluid fas fa-gem me-3 mb-4" alt="100   ">
+                    <img src="{{ url('assets/logo1.png') }}" width="160px" height="auto" class="rounded img-fluid fas fa-gem me-3 mb-4" alt="100   ">
                     <p>
                         YUK! NGAJI adalah website belajar mengaji secara online dan mandiri. Aktif memberikan ilmu seputar mengaji untuk membantu menuntaskan buta huruf hijaiyah dalam membaca Al Qur’an.
                         </p>

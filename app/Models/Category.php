@@ -19,12 +19,12 @@ class Category extends Model
 
     ];
 
-    public function kategorikelas()
+    public function classes()
     {
         return $this->belongsTo(Classes::class, 'kelas_id', 'id');
     }
 
-    public function kategorimateri()
+    public function materials()
     {
         return $this->hasMany(Material::class, 'kategori_id', 'id');
     }

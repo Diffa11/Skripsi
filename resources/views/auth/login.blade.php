@@ -1,4 +1,4 @@
-@extends('layout.daftar')
+@extends('layouts.daftar')
 
 @section('content')
 <section class="gradient-form">
@@ -45,7 +45,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="row mb-3">
+                                    {{-- <div class="row mb-3">
                                         <div class="d-flex mb-4">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -63,7 +63,7 @@
                                                 </div>
                                             @endif
                                         </div>
-                                    </div>
+                                    </div> --}}
 
                                     <div class="row mb-0">
                                         <div class="d-grid gap-2">
